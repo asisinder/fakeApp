@@ -1,18 +1,18 @@
 import React from "react";
-import {View,Text,Button, StyleSheet} from 'react-native';
+import {View,Text, StyleSheet} from 'react-native';
 import ButtonWithBackground from "../components/ButtonWithBackground";
 
-function LoginScreen(props){
+function UserProfileScreen(props){
     return(
         <View style={styles.container}>
-            <Text style={styles.textFont}>Login Screen</Text>
-            <ButtonWithBackground title="Login" color="green" onPress={()=>props.navigation.navigate('bottomTab')} />
-            <ButtonWithBackground title="Sign-up" color="orange" onPress={()=>props.navigation.navigate('signup')} />
+            <Text style={styles.textFont}>User Profile Screen</Text>
+            <ButtonWithBackground title="Your Orders" color="green"  onPress={()=>props.navigation.navigate('order')}></ButtonWithBackground>
+            
         </View>
     )
 }
 
-export default LoginScreen;
+export default UserProfileScreen;
 
 const styles=StyleSheet.create({
     container:{
@@ -26,5 +26,4 @@ const styles=StyleSheet.create({
         fontSize: 24,
         fontWeight: '600',
       },
-   
-});
+    });

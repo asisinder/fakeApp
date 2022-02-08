@@ -6,7 +6,7 @@ function PaymentgatewayScreen(props){
         <View style={styles.container}>
             <Text style={styles.textFont}>Payment Gateway Screen</Text>
             <Button title="Pay" style={styles.buttonStyleP} onPress={()=>props.navigation.navigate('order')}></Button>
-            <Button title="Cancel" style={styles.buttonStyleN} onPress={()=>props.navigation.navigate('home')}></Button>
+            <Button title="Cancel" style={styles.buttonStyleN} onPress={()=>props.navigation.navigate('bottomTab')}></Button>
         </View>
     )
 }

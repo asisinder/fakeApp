@@ -6,7 +6,7 @@ function YourOrderScreen(props){
         <View style={styles.container}>
             <Text style={styles.textFont}>Your Order Screen</Text>
         
-            <Button title="Back" style={styles.buttonStyleN} onPress={()=>props.navigation.navigate('home')}></Button>
+            <Button title="Back" style={styles.buttonStyleN} onPress={()=>props.navigation.navigate('bottomTab')}></Button>
         </View>
     )
 }

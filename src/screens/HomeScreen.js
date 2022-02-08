@@ -1,6 +1,7 @@
 import React from "react";
 import {View,Text,Button, StyleSheet} from 'react-native';
 import ButtonWithBackground from "../components/ButtonWithBackground";
+import Icon from 'react-native-vector-icons/FontAwesome';
 
 function HomeScreen(props){
     return(

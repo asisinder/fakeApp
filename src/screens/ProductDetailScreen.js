@@ -8,7 +8,7 @@ function ProductDetailScreen(props){
             <Text style={styles.textFont}>Product1 Detail Screen</Text>
             <ButtonWithBackground title="Add to Cart" color="green" onPress={()=>props.navigation.navigate('cart')} />
             <ButtonWithBackground title="Buy Now" color="orange" onPress={()=>props.navigation.navigate('shipping')}></ButtonWithBackground>
-            <ButtonWithBackground title="Back" color="red" onPress={()=>props.navigation.navigate('home')}></ButtonWithBackground>
+            <ButtonWithBackground title="Back" color="red" onPress={()=>props.navigation.navigate('bottomTab')}></ButtonWithBackground>
         </View>
     )
 }

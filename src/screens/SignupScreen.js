@@ -6,7 +6,7 @@ function SignupScreen(props){
     return(
         <View style={styles.container}>
             <Text style={styles.textFont}>Sign-up Screen</Text>
-            <ButtonWithBackground title="Sign-up" color="green"  onPress={()=>props.navigation.navigate('home')}></ButtonWithBackground>
+            <ButtonWithBackground title="Sign-up" color="green"  onPress={()=>props.navigation.navigate('bottomTab')}></ButtonWithBackground>
             
         </View>
     )

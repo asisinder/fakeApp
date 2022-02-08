@@ -1,6 +1,7 @@
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import {createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
 import LoginScreen from '../screens/LoginScreen';
 import SignupScreen from '../screens/SignupScreen';
 import HomeScreen from '../screens/HomeScreen';
@@ -9,9 +10,13 @@ import ProductDetailScreen from '../screens/ProductDetailScreen';
 import ShippingScreen from '../screens/ShippingScreen';
 import YourOrderScreen from '../screens/YourOrderScreen';
 import PaymentgatewayScreen from '../screens/PaymentgatewayScreen';
+import DiscountScreen from '../screens/DiscountScreen';
+import UserProfileScreen from '../screens/UserProfileScreen';
+import FontAwesome from 'react-native-vector-icons/FontAwesome';
 
 
  const myStack = createNativeStackNavigator();
+ 
 
 const MainNavigation = (props) =>{
     return(
@@ -19,7 +24,7 @@ const MainNavigation = (props) =>{
             <myStack.Navigator screenOptions={{headerShown:false}} initialRouteName='login'>
               <myStack.Screen name='login' component={LoginScreen}/>
               <myStack.Screen name='signup' component={SignupScreen} />
-              <myStack.Screen name='home' component={HomeScreen} />
+              <myStack.Screen name='bottomTab' component={MyBottomTab} />
               <myStack.Screen name='cart' component={CartScreen} />
               <myStack.Screen name='product' component={ProductDetailScreen}  />
               <myStack.Screen name='shipping' component={ShippingScreen}  />
@@ -31,6 +36,28 @@ const MainNavigation = (props) =>{
     )
 }
 
+const bottomStack = createMaterialBottomTabNavigator();
+function MyBottomTab(){
+    return(
+        <bottomStack.Navigator screenOptions={{headerShown:false}} initialRouteName='home'  activeColor="red"
+        barStyle={{ backgroundColor: 'white',borderRadius:15,height:90,marginBottom:10}}>
+           <bottomStack.Screen name='home' component={HomeScreen} options={{tabBarLabel: 'Home',
+           tabBarIcon:({color})=>(<FontAwesome name={'shopping-cart'} color={color} size={26}/>),
+           }}/>
+
+           <bottomStack.Screen name='cart' component={CartScreen} options={{tabBarLabel: 'Cart',
+           tabBarIcon:({color})=>(<FontAwesome name={'shopping-cart'} color={color} size={26} />),
+           }} />
+           <bottomStack.Screen name='discount' component={DiscountScreen} options={{tabBarLabel: 'Discount',
+           tabBarIcon:({color})=>(<FontAwesome name={'shopping-cart'} color={color} size={26} />),
+           }} />
+           <bottomStack.Screen name='user' component={UserProfileScreen} options={{tabBarLabel: 'User Profile',
+           tabBarIcon:({color})=>(<FontAwesome name={'shopping-cart'} color={color} size={26} />),
+           }} />
+
+        </bottomStack.Navigator>
+    )
+}
 
 
 
