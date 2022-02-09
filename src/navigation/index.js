@@ -39,20 +39,22 @@ const MainNavigation = (props) =>{
 const bottomStack = createMaterialBottomTabNavigator();
 function MyBottomTab(){
     return(
-        <bottomStack.Navigator screenOptions={{headerShown:false}} initialRouteName='home'  activeColor="red"
-        barStyle={{ backgroundColor: 'white',borderRadius:15,height:90,marginBottom:10}}>
-           <bottomStack.Screen name='home' component={HomeScreen} options={{tabBarLabel: 'Home',
-           tabBarIcon:({color})=>(<FontAwesome name={'shopping-cart'} color={color} size={26}/>),
+        <bottomStack.Navigator screenOptions={{headerShown:false}} initialRouteName='home'  activeColor="red" 
+        barStyle={{backgroundColor: 'white',height:100,display:'flex',flexDirection:"column",justifyContent:"space-evenly",}}>
+           
+           
+           <bottomStack.Screen name='home' component={HomeScreen} options={{  tabBarLabel: 'Home',
+           tabBarIcon:({color})=>(<FontAwesome name={'home'} color={color} size={20}/>),
            }}/>
 
-           <bottomStack.Screen name='cart' component={CartScreen} options={{tabBarLabel: 'Cart',
-           tabBarIcon:({color})=>(<FontAwesome name={'shopping-cart'} color={color} size={26} />),
+           <bottomStack.Screen name='cart' component={CartScreen} options={{ tabBarLabel: 'Cart',
+           tabBarIcon:({color})=>(<FontAwesome name={'shopping-cart'} color={color} size={20} />),
            }} />
            <bottomStack.Screen name='discount' component={DiscountScreen} options={{tabBarLabel: 'Discount',
-           tabBarIcon:({color})=>(<FontAwesome name={'shopping-cart'} color={color} size={26} />),
+           tabBarIcon:({color})=>(<FontAwesome name={'percent'} color={color} size={20} />),
            }} />
            <bottomStack.Screen name='user' component={UserProfileScreen} options={{tabBarLabel: 'User Profile',
-           tabBarIcon:({color})=>(<FontAwesome name={'shopping-cart'} color={color} size={26} />),
+           tabBarIcon:({color})=>(<FontAwesome name={'user'} color={color} size={20} />),
            }} />
 
         </bottomStack.Navigator>

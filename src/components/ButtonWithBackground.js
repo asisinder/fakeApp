@@ -12,8 +12,8 @@ const ButtonWithBackground = (props)=>{
 
 const styles=StyleSheet.create({
     button:{
-        padding:16,
-        width:200,
+        padding:12,
+        width:180,
         borderRadius:24,
         alignItems:"center",
         margin:5,
@@ -21,6 +21,13 @@ const styles=StyleSheet.create({
     text:{
         color:"white",
         fontSize:20,
+    },
+    smallbutton:{
+        padding:5,
+        width:25,
+        borderRadius:5,
+        alignItems:"center",
+        margin:5,
     }
 })
 
