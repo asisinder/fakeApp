@@ -13,6 +13,8 @@ import PaymentgatewayScreen from '../screens/PaymentgatewayScreen';
 import DiscountScreen from '../screens/DiscountScreen';
 import UserProfileScreen from '../screens/UserProfileScreen';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
+import ForgetPasswordScreen from '../screens/ForgetPasswordScreen';
+import UpdatePasswordScreen from '../screens/UpdatePasswordScreen';
 
 
  const myStack = createNativeStackNavigator();
@@ -30,7 +32,10 @@ const MainNavigation = (props) =>{
               <myStack.Screen name='shipping' component={ShippingScreen}  />
               <myStack.Screen name='order' component={YourOrderScreen}  />
               <myStack.Screen name='payment' component={PaymentgatewayScreen}  />
-            
+              <myStack.Screen name='discount' component={DiscountScreen} />
+              <myStack.Screen name='forgetPassword' component={ForgetPasswordScreen} />
+              <myStack.Screen name='updatePassword' component={UpdatePasswordScreen} />
+              
             </myStack.Navigator>
         </NavigationContainer>
     )

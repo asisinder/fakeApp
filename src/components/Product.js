@@ -4,7 +4,7 @@ import { Dimensions } from 'react-native';
 
 const getWidth = () => Dimensions.get('window').width;
 
-function Product(props){
+function Product({}){
     return(
          <TouchableOpacity style={styles.card}>
          <Image />
@@ -21,7 +21,7 @@ function Product(props){
          margin:5,
          alignItems: 'center',
          justifyContent: 'center',
-         backgroundColor:"#eee",
+         backgroundColor:"white",
 
      }
  })

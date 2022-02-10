@@ -1,5 +1,5 @@
 import React from "react";
-import {Image, StyleSheet, Text, TouchableOpacity, View,} from 'react-native';
+import {Image, Pressable, StyleSheet, Text, TouchableOpacity, View,} from 'react-native';
 import { Dimensions } from 'react-native';
 
 const getWidth = () => Dimensions.get('window').width;
@@ -12,7 +12,9 @@ export default function HomeProductContainer(props){
 
         <View style={styles.header}>
         <Text style={styles.textFont}>{props.name}</Text>
+        <Pressable onPress={props.onSeeMore} >
         <Text style={styles.textFont}>See more</Text>
+        </Pressable>
         </View>
 
         <View style={styles.body}>

@@ -4,11 +4,13 @@ import ButtonWithBackground from "../components/ButtonWithBackground";
 import Icon from 'react-native-vector-icons/FontAwesome';
 import Header from "../components/Header";
 import HomeProductContainer, { HomeCard } from "../components/HomeProductContainer";
+import Spacer from "../components/Spacer";
 
 function HomeScreen(props){
-    const renderitem=({item})=><HomeProductContainer name={item}  ontap={cat=>props.navigation.navigate('product')}/>
+    const renderitem=({item})=><HomeProductContainer name={item}  ontap={cat=>props.navigation.navigate('product')} onSeeMore={cats=>props.navigation.navigate('discount')}/>
     return(
-       <KeyboardAvoidingView style={styles.homee}>
+       <View style={styles.homee}>
+        
         <Header />
         <FlatList data={HomeCard} renderItem={renderitem}
     keyExtractor={item => item.toString()} >
@@ -16,7 +18,8 @@ function HomeScreen(props){
             {/* <ButtonWithBackground  title="Product1" color="green" onPress={()=>props.navigation.navigate('product')} />  */}
            
         </FlatList>
-        </KeyboardAvoidingView>
+    
+        </View>
     )
 }
 
@@ -27,6 +30,7 @@ const styles=StyleSheet.create({
     flexDirection:"column",
     justifyContent:"flex-start",
     backgroundColor:"#eee",
+    flex:1,
 
     },
     
