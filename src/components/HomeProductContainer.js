@@ -20,7 +20,7 @@ export default function HomeProductContainer(props){
         <View style={styles.body}>
         <View style={styles.subsBody}>
          <TouchableOpacity onPress={props.ontap} >
-         <Image  style={styles.imgStyle} source={{uri:"https://assets.puzzlefactory.pl/puzzle/201/486/original.jpg"}} resizeMode="contain" />
+         <Image  style={styles.imgStyle} source={{uri:"https://assets.puzzlefactory.pl/puzzle/201/486/original.jpg"}} resizeMode="cover" />
         <View style={{paddingLeft:25}}>
          <Text style={styles.textF}>Lady painting</Text>
          <Text style={styles.textp}>3000</Text>
@@ -32,7 +32,7 @@ export default function HomeProductContainer(props){
          <View style={styles.subBody}>
          <View style={styles.subsBody}>
          <TouchableOpacity onPress={props.ontap} >
-         <Image  style={styles.imgStyleSmall} source={{uri:"https://m.media-amazon.com/images/I/81nh7yEGiHL._SX466_.jpg"}} resizeMode="contain" />
+         <Image  style={styles.imgStyleSmall} source={{uri:"https://m.media-amazon.com/images/I/81nh7yEGiHL._SX466_.jpg"}} resizeMode="cover" />
          <View style={{paddingLeft:25}}>
          <Text style={styles.textF}>Moon painting</Text>
          <Text style={styles.textp}>3000</Text>
@@ -42,7 +42,7 @@ export default function HomeProductContainer(props){
          </View>
          <View style={styles.subsBody}>
          <TouchableOpacity onPress={props.ontap} >
-         <Image  style={styles.imgStyleSmall} source={{uri:"https://images.pexels.com/photos/1183992/pexels-photo-1183992.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"}} resizeMode="contain" />
+         <Image  style={styles.imgStyleSmall} source={{uri:"https://images.pexels.com/photos/1183992/pexels-photo-1183992.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"}} resizeMode="cover" />
          <View style={{paddingLeft:25}}>
          <Text style={styles.textF}>Artistic painting</Text>
          <Text style={styles.textp}>3000</Text>
@@ -83,8 +83,9 @@ const styles = StyleSheet.create({
         justifyContent:"center",
         borderWidth:1,
         borderColor:"#e1e1e1",
-        width:getWidth(),
+        width:'100%',
         backgroundColor:"#fff",
+        
        
       
     },
@@ -94,14 +95,15 @@ const styles = StyleSheet.create({
         justifyContent:"center",
         borderWidth:1,
         borderColor:"#e1e1e1",
+        width:getWidth()/2,
     
     },
     imgStyle:{
-     width:getWidth()/2,
-     height:200,
+     width:'100%',
+     height:270,
     },
     imgStyleSmall:{
-        width:getWidth()/2,
+        width:'100%',
         height:100,
        },
     textFont: {
@@ -116,6 +118,7 @@ const styles = StyleSheet.create({
         alignItems:"flex-start",
         borderWidth:1,
         borderColor:"#e1e1e1",
+        width:getWidth()/2,
         
     },
     textF: {
